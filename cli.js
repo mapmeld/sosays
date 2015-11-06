@@ -42,7 +42,7 @@ if (process.argv.length > 2) {
             exec(runner + ' ' + results[0].href);
           } else if ((text + '').trim() === '42') {
             console.log('here we go!');
-            exec(result[0].cmd);
+            exec(results[0].cmd);
           }
           process.exit();
         });
