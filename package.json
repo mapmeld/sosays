@@ -1,6 +1,6 @@
 {
   "name": "sosays",
-  "version": "1.0.5",
+  "version": "1.1.1",
   "description": "Not sure how to do something on the command line? Use sosays to search StackOverflow",
   "main": "index.js",
   "scripts": {

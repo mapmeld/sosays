@@ -1,6 +1,8 @@
-var rebootSI = true;
+var path = require('path');
+
 var si = require('search-index')({
-  deletable: false
+  deletable: false,
+  indexPath: path.join(__dirname, 'si')
 });
 
 function sosays (searchbox, callback, globalInstall) {
@@ -9,18 +11,6 @@ function sosays (searchbox, callback, globalInstall) {
       '*': searchbox.split(/\s+/)
     }
   };
-
-  if (globalInstall && rebootSI) {
-    rebootSI = false;
-    var p = '/usr/local/lib/node_modules/sosays/si';
-    if (process.platform.indexOf('win') === 0) {
-      p = '%AppData%\\npm\\node_modules\\sosays\\si';
-    }
-    si = require('search-index')({
-      deletable: false,
-      indexPath: p
-    });
-  }
 
   try {
     si.search(queryObj, function (err, searchResults) {
