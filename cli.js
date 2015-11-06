@@ -27,7 +27,7 @@ if (process.argv.length > 2) {
         printResult(results[q]);
       }
       if (results.length === 1) {
-        console.log('enter 1 to load URL, 42 to run, any other to continue');
+        console.log('enter 1 to load URL, 42 to run, enter to quit');
 
         process.stdin.on('data', function (text) {
           if ((text + '').trim() === '1') {
@@ -48,7 +48,7 @@ if (process.argv.length > 2) {
         });
       }
     }
-  });
+  }, true);
 } else {
   console.log('no search was made: keep typing after \'sosays\'.');
 }

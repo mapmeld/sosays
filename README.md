@@ -20,7 +20,7 @@ tasklist /FI "IMAGENAME eq myapp.exe" 2>NUL | find /I /N "myapp.exe">NUL
 if "%ERRORLEVEL%"=="0" echo Programm is running
 
 -----------------
-enter 1 to load URL, 42 to run, any other to continue
+enter 1 to load URL, 42 to run, enter to quit
 ```
 
 sometimes there are multiple results:
