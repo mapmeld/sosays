@@ -7,7 +7,7 @@ The package comes with a database of StackOverflow questions and answers, so you
 can use it offline. After a question you can enter 1 to view the original thread,
 or 42 to execute a command.
 
-## Usage
+## As a Command Line tool
 
 ```bash
 npm install -g sosays
@@ -26,7 +26,8 @@ enter 1 to load URL, 42 to run, any other to continue
 sometimes there are multiple results:
 
 ```bash
-sosays check if process is running
+sosays pretty print
+searching...
 there were multiple answered questions:
 Q: How to pretty print XML from the command line?
 -----------------
@@ -39,6 +40,20 @@ Q: How can I pretty-print JSON?
 echo '{"foo": "lorem", "bar": "ipsum"}' | python -m json.tool
 
 -----------------
+```
+
+## As a module
+
+```javascript
+var sosays = require("sosays");
+sosays('pretty-print', function (err, responses) {
+  // responses format
+  /*
+  [
+    { href: '', cmd: '', title: '', sum: '' }
+  ]
+  */
+});
 ```
 
 ## Inspiration
