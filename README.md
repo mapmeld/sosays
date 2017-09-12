@@ -1,5 +1,7 @@
 # sosays
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mapmeld/sosays.svg)](https://greenkeeper.io/)
+
 sosays is a command-line helper written in Node.js, which shows you advice from
 StackOverflow about what you should do in Bash.
 
